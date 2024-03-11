@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using _6_7lab.Models
+@model IEnumerable<_6_7lab.Models.Product>
+<div class="text-center">
+    <h1 class="display-4">Order</h1>
+    <p>Submit your order</p>
+    <table class="table">
+        <tr><td>Id</td><td>Name</td><td>Price</td></tr>
+        @foreach (var p in Model)
+        {
+            <tr><td>@p.Size</td><td>@p.Name</td><td>@p.Price</td></tr>
+        }
+    </table>
+
+</div>

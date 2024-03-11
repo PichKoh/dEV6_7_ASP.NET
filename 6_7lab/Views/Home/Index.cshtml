@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Please enter info about you</p>
+    <div style="color:red;">
+        @{
+            var data = ViewBag.Message;
+        }
+        @data
+    </div>
+    
+    <form method="POST">
+        Your name: <input type="text" name="Name"/>
+        <p></p>
+        Age years: <input type='text' name='Age' />
+        <p></p>
+        <input type="submit" />
+    </form>
+</div>
